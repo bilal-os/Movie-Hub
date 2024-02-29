@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movie Hub</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    	<section id="top">
+		<div class="container">
+			<div class="row top_1">
+				<div class="col-md-3">
+					<div class="top_1l pt-1">
+						<h3 class="mb-0"><a class="text-white" href="index.html"><i
+									class="fa fa-video-camera col_red me-1"></i> Movie Hub</a></h3>
+					</div>
+				</div>
+                
+				 <div class="col-md-5">
+                        <div class="top_1m">
+                            <div class="input-group" id="DynSearchBar">
+                                <input type="text" class="form-control bg-black" placeholder="Search Site..."
+                                    id="SearchBar">
+                                <span class="input-group-btn">
+                                    <button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+                                        Search
+                                    </button>
+                                </span>
+                            </div>
+                            <div id="searchitemscontainer" style="position:absolute; width: 459px; z-index: 1000;">
+                                <ul class="custom_drop" id="itemsContainer"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+				<div class="col-md-4">
+					<div class="top_1r text-end">
+						<ul class="social-network social-circle mb-0">
+							<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section id="header">
+		<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+			<div class="container">
+				<a class="navbar-brand text-white fw-bold" href="index.html"><i
+						class="fa fa-video-camera col_red me-1"></i> Movie Hub</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mb-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="movies.html">Browse Movies</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tvseries.html">Browse Tv Series</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<section id="center" class="center_home">
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+			
+			</div>
+			<div class="carousel-inner">
+			
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="prev" style="left: -5%; ">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+
+	<section id="trend" class="pt-4 pb-5">
+		<div class="container">
+			<div class="row trend_1">
+				<div class="col-md-6 col-6">
+					<div class="trend_1l">
+						<h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Latest <span
+								class="col_red">Movies</span></h4>
+					</div>
+				</div>
+				<div class="col-md-6 col-6">
+					<div class="trend_1r text-end">
+						<h6 class="mb-0"><a class="button" href="movies.html"> View All</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="row trend_2 mt-4">
+				<div id="carouselExampleCaptions1" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="0"
+							class="active" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="1"
+							aria-label="Slide 2" class="" aria-current="true"></button>
+					</div>
+					<div id="movies" class="carousel-inner">
+						
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+		<section id="trend1" class="pt-4 pb-5">
+		<div class="container">
+			<div class="row trend_1">
+				<div class="col-md-6 col-6">
+					<div class="trend_1l">
+						<h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Latest <span
+								class="col_red">TV Series</span></h4>
+					</div>
+				</div>
+				<div class="col-md-6 col-6">
+					<div class="trend_1r text-end">
+						<h6 class="mb-0"><a class="button" href="tvseries.html"> View All</a></h6>
+					</div>
+				</div>
+			</div>
+			<div class="row trend_2 mt-4">
+				<div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0"
+							class="active" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
+							aria-label="Slide 2" class="" aria-current="true"></button>
+					</div>
+					<div id="tvseries" class="carousel-inner">
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="popular" class="pt-4 pb-5 bg_grey">
+		<div class="container">
+			<div class="row trend_1">
+				<div class="col-md-12">
+					<div class="trend_1l">
+						<h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Popular </h4>
+					</div>
+				</div>
+			</div>
+			<div class="row popular_1 mt-4">
+				<ul class="nav nav-tabs  border-0 mb-0">
+					<li class="nav-item">
+						<a href="#home" data-bs-toggle="tab" aria-expanded="false" class="nav-link active">
+							<span class="d-md-block">JUST ARRIVED</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#settings" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+							<span class="d-md-block">POPULAR MOVIES</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#settings_o" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+							<span class="d-md-block">POPULAR TV SERIES</span>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+			<div class="popular_2 row mt-4">
+				<div class="tab-content">
+					<div class="tab-pane active" id="home">
+						<div class="popular_2i row" id="movies_justarrived">
+							
+						</div>
+						<div class="popular_2i row mt-4" id="tvseries_justarrived">
+							
+						</div>
+					</div>
+					<div class="tab-pane" id="settings">
+						<div class="popular_2i row" id="upper_popular">
+							
+						</div>
+						<div class="popular_2i row mt-4" id="lower_popular">
+							
+						</div>
+					</div>
+					<div class="tab-pane" id="settings_o">
+						<div class="popular_2i row" id="upper_popular_tv">
+							
+						</div>
+						<div class="popular_2i row mt-4" id="lower_popular_tv">
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section id="play">
+		<div class="play_m clearfix">
+			<div class="container" id="best_movie">
+				
+			
+			</div>
+		</div>
+	</section>
+
+
+	<section id="footer">
+		<div class="footer_m clearfix">
+			<div class="container">
+				<div class="row footer_1">
+					<div class="col-md-4">
+						<div class="footer_1i">
+							<h3><a class="text-white" href="index.html"><i class="fa fa-video-camera col_red me-1"></i>
+									Movie Hub</a></h3>
+							<p class="mt-3">Welcome to our movie hub! We love watching films and are thrilled about
+								sharing the greatest ones. Explore our website for ratings, teasers, and excellent
+								suggestions in every genre. </p>
+							<h6 class="fw-normal"><i class="fa fa-map-marker fs-5 align-middle col_red me-1"></i> Fast
+								Nuces Lahore, Pakistan</h6>
+							<h6 class="fw-normal mt-3"><i class="fa fa-envelope fs-5 align-middle col_red me-1"></i>
+								info@gmail.com</h6>
+							<h6 class="fw-normal mt-3 mb-0"><i class="fa fa-phone fs-5 align-middle col_red me-1"></i>
+								+123 123 456</h6>
+						</div>
+					</div>
+					<div class="col-md-4">
+						
+					</div>
+					<div class="col-md-4">
+						<div class="footer_1i">
+							<h4>Sign <span class="col_red">Newsletter</span></h4>
+							<p class="mt-3">Subscribe to our newsletter list to get latest news and updates from us</p>
+							<div class="input-group">
+								<input type="text" class="form-control bg-black" placeholder="Email">
+								<span class="input-group-btn">
+									<button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+										Subscribe</button>
+								</span>
+							</div>
+							<ul class="social-network social-circle mb-0 mt-4">
+								<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a>
+								</li>
+								<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<section id="footer_b" class="pt-3 pb-3 bg_grey">
+<div class="container">
+   <div class="row footer_1">
+     <div class="col-md-8">
+	  <div class="footer_1l">
+	   <p class="mb-0">© 2023 Movie Hub. All Rights Reserved </p>
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="footer_1r">
+	   <ul class="mb-0">
+	    <li class="d-inline-block me-2"><a href="index.html">Home</a></li>
+		<li class="d-inline-block me-2"><a href="movies.html">Browse Movies</a></li>
+		<li class="d-inline-block me-2"><a href="tvseries.html">Browse TV Series</a></li>
+		<li class="d-inline-block me-2"><a href="contact.html">Contact Us</a></li>
+	   </ul>
+	  </div>
+	 </div>
+   </div>
+</div>
+</section>
+
+
+	<script>
+		window.onscroll = function () { myFunction() };
+
+		var navbar_sticky = document.getElementById("navbar_sticky");
+		var sticky = navbar_sticky.offsetTop;
+		var navbar_height = document.querySelector('.navbar').offsetHeight;
+
+		function myFunction() {
+			if (window.pageYOffset >= sticky + navbar_height) {
+				navbar_sticky.classList.add("sticky")
+				document.body.style.paddingTop = navbar_height + 'px';
+			} else {
+				navbar_sticky.classList.remove("sticky");
+				document.body.style.paddingTop = '0'
+			}
+		}
+	</script>
+
+
+<script>
+    // Define a separate module for search functionality
+    var SearchModule = (function ($) {
+        // Private variables
+        var customDrop = $(".custom_drop");
+        var resultsContainer = $("#itemsContainer");
+
+        // Private function to handle the AJAX request
+        function performSearch(searchTerm) {
+            $.ajax({
+                url: 'http://localhost:3000/api/searchbar',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ searchTerm: searchTerm }),
+                success: function (data) {
+                    displaySearchResults(data);
+                },
+                error: function (error) {
+                    console.error('Error fetching search results:', error);
+                }
+            });
+        }
+
+        // Private function to display search results
+        function displaySearchResults(data) {
+            resultsContainer.empty();
+
+                 for (var i = 0; i < data.length; i++) {
+            // Create a clickable link with movie ID as a data attribute
+            var listItem = $('<li><a class="dropdown-item" href="#" data-movie-id="' + data[i].id + '">' +
+                data[i].title + ' ' + data[i].release_year +
+                '</a></li>');
+
+            // Attach a click event to the link
+            listItem.find('a').on('click', function (event) {
+                event.preventDefault();
+                var movieId = $(this).data('movie-id');
+                // Redirect to another HTML page with the movie ID
+                window.location.href = 'moviedetail.html?movieId=' + movieId;
+            });
+
+            resultsContainer.append(listItem);
+        }
+            // Toggle the 'active' class based on the search results
+            customDrop.toggleClass("active", resultsContainer.children().length > 0);
+        }
+
+        // Public function to handle keyup event on the search bar
+        function handleSearchKeyup() {
+            var searchTerm = $("#SearchBar").val().toLowerCase().trim();
+
+            if (searchTerm.length > 0) {
+                performSearch(searchTerm);
+            } else {
+                // Clear results and hide dropdown if search term is empty
+                resultsContainer.empty();
+                customDrop.removeClass("active");
+            }
+        }
+
+        // Public function to initialize the search module
+        function init() {
+            $("#SearchBar").keyup(handleSearchKeyup);
+        }
+
+        // Return public functions
+        return {
+            init: init
+        };
+    })(jQuery);
+
+    // Initialize the search module
+    $(document).ready(function () {
+        SearchModule.init();
+    });
+</script>
+
+<script>
+$(document).ready(function () {
+    // Make an AJAX request to fetch the best movie of the month from your Express server
+    $.ajax({
+        url: 'http://localhost:3000/api/bestMovieOfMonth',
+        method: 'GET',
+        success: function (data) {
+            console.log('Received data456:', data);
+            // Call the displayMovie function with the received data
+            displayMovie(data);
+        },
+        error: function (error) {
+            console.error('Error fetching best movie data:', error);
+            // Handle error, show a message, etc.
+        },
+    });
+
+    function displayMovie(movie) {
+        var container = $('#best_movie');
+		var genreNames = movie.genreNames.split(',').map(genre => genre.trim());
+
+        var movieHtml = `
+         <div class="play2 row mt-0">
+					<div class="col-md-4 p-0">
+						<div class="play2l">
+							<div class="grid clearfix">
+								<figure class=" mb-0">
+								<a href="#"><img src="data:image/jpeg;base64,${movie.poster}" height="590"  class="w-100" alt="abc"></a>
+								</figure>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 p-0">
+						<div class="play2r  bg_grey p-4">
+							<div class="d-flex justify-content-between align-items-center">
+							<h5><span class="col_red">BEST MOVIE OF THE MONTH :</span> <br>
+								${movie.title}</h5>
+							<h6 class="mb-0"><a class="button" href="moviedetail.html?movieId=${movie.id}"> More Info</a></h6>
+							</div>
+
+							<h5 class="mt-3">${movie.genreNames}</h5>
+							<hr class="line">
+							<p class="mt-3">${movie.overview}</p>
+							<div class="play2ri row mt-4">
+								<div class="col-md-6">
+									<div class="play2ril">
+										<h6 class="fw-normal">
+											Running Time: <span class="pull-right">${movie.runtime}</span></h6>
+										<hr class="hr_1">
+										<h6 class="fw-normal">
+											Genre: <span class="pull-right"> ${movie.genreNames}</span></h6>
+										<hr class="hr_1">
+										<h6 class="fw-normal">
+											Director: <span class="pull-right">${movie.director}</span></h6>
+										<hr class="hr_1">
+										<h6 class="fw-normal">
+											Stars: <span class="pull-right">${movie.actorsNames}</span></h6>
+										<hr class="hr_1">
+										<h6 class="fw-normal">
+											Release Date: <span class="pull-right">${movie.releaseYear}</span></h6>
+										<hr class="hr_1 mb-0">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="play2rir">
+										<h6 class="fw-normal">Imdb - ${movie.rating}</h6>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 92%;"
+												aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<h6 class="fw-normal mt-3">Semper - 7.3</h6>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 73%;"
+												aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<h6 class="fw-normal mt-3">Dapibus - 9.0</h6>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 90%;"
+												aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<h6 class="fw-normal mt-3">Ipsum - 8.3</h6>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 83%;"
+												aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<h6 class="fw-normal mt-3">Lorem - 7.9</h6>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 79%;"
+												aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+        `;
+
+        container.append(movieHtml);
+    }
+});
+</script>
+
+<script>
+$(document).ready(function () {
+    // Make an AJAX request to fetch trending movies from your Express server
+    $.ajax({
+        url: 'http://localhost:3000/api/popularSection',
+        method: 'GET',
+        success: function (data) {
+            console.log('Received data:', data);
+
+            if (data.movies.length > 0 && data.tvSeries.length > 0) {
+                displayMovies(data.movies);
+				displayTvSeries(data.tvSeries);
+            } else {
+                console.error('No data found.');
+            }
+        },
+        error: function (error) {
+            console.error('Error fetching trending data:', error);
+            // Handle error, show a message, etc.
+        },
+    });
+
+    function displayMovies(movies) {
+        var container = $('#upper_popular');
+		var container2 =$('#lower_popular');
+
+        for (var i = 0; i < movies.length-2; i++) {
+            var movie = movies[i];
+			 var truncatedOverview = movie.overview.length > 100 ?
+            movie.overview.substring(0, 100) + '...' :
+            movie.overview;
+            var movieHtml =
+                `
+                <div class="col-md-6">
+                    <div class="popular_2i1 row">
+                        <div class="col-md-4 col-4">
+                            <div class="popular_2i1lm position-relative clearfix">
+                                <div class="popular_2i1lm1 clearfix">
+                                    <div class="grid">
+                                        <figure class="mb-0">
+                                            <a href="#"><img src="data:image/jpeg;base64,${movie.poster}" class="w-100" alt="img25"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="popular_2i1r">
+                                <h5><a class="col_red" href="#">${movie.title}</a></h5>
+                                <h6>${movie.genre_names.join(', ')}</h6>
+                                <h6> Imdb ${movie.rating} <span class="ms-2"><i
+                                            class="fa fa-star col_red me-1"></i></span> Year : ${movie.release_year} <span
+                                        class="ms-2">Runtime: ${movie.runtime}</span></h6>
+                                <p>${truncatedOverview}</p>
+                                <h6 class="mb-0"><a class="button" href="moviedetail.html?movieId=${movie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.append(movieHtml);
+        }
+   
+		 for (var i = 2; i < movies.length; i++) {
+            var movie = movies[i];
+			 var truncatedOverview = movie.overview.length > 100 ?
+            movie.overview.substring(0, 100) + '...' :
+            movie.overview;
+            var movieHtml =
+                `
+                <div class="col-md-6">
+                    <div class="popular_2i1 row">
+                        <div class="col-md-4 col-4">
+                            <div class="popular_2i1lm position-relative clearfix">
+                                <div class="popular_2i1lm1 clearfix">
+                                    <div class="grid">
+                                        <figure class="mb-0">
+                                            <a href="#"><img src="data:image/jpeg;base64,${movie.poster}" class="w-100" alt="img25"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="popular_2i1r">
+                                <h5><a class="col_red" href="#">${movie.title}</a></h5>
+                                <h6>${movie.genre_names.join(', ')}</h6>
+                                <h6> Imdb ${movie.rating} <span class="ms-2"><i
+                                            class="fa fa-star col_red me-1"></i></span> Year : ${movie.release_year} <span
+                                        class="ms-2">Runtime: ${movie.runtime}</span></h6>
+                                <p>${truncatedOverview}</p>
+                                <h6 class="mb-0"><a class="button" href="moviedetail.html?movieId=${movie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container2.append(movieHtml);
+        }
+   
+    }
+
+
+		function displayTvSeries(tvseries){
+		  var container = $('#upper_popular_tv');
+		  var container2 = $('#lower_popular_tv');
+
+        for (var i = 0; i < tvseries.length - 2; i++) {
+            var tvserie = tvseries[i];
+			 var truncatedOverview = tvserie.overview.length > 100 ?
+            tvserie.overview.substring(0, 100) + '...' :
+            tvserie.overview;
+            var tvHtml =
+                `
+                <div class="col-md-6">
+                    <div class="popular_2i1 row">
+                        <div class="col-md-4 col-4">
+                            <div class="popular_2i1lm position-relative clearfix">
+                                <div class="popular_2i1lm1 clearfix">
+                                    <div class="grid">
+                                        <figure class="mb-0">
+                                            <a href="#"><img src="data:image/jpeg;base64,${tvserie.poster}" class="w-100" alt="img25"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="popular_2i1r">
+                                <h5><a class="col_red" href="#">${tvserie.title}</a></h5>
+                                <h6>${tvserie.genre_names.join(', ')}</h6>
+                                <h6> Imdb ${tvserie.rating} <span class="ms-2"><i
+                                            class="fa fa-star col_red me-1"></i></span> Year : ${tvserie.release_year} <span
+                                        class="ms-2">Number of Seasons: ${tvserie.noOfSeason}</span></h6>
+                                <p>${truncatedOverview}</p>
+                                <h6 class="mb-0"><a class="button" href="tvseriesdetail.html?tvId=${tvserie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.append(tvHtml);
+        }
+	
+
+	        for (var i = 2; i < tvseries.length; i++) {
+            var tvserie = tvseries[i];
+			 var truncatedOverview = tvserie.overview.length > 100 ?
+            tvserie.overview.substring(0, 100) + '...' :
+            tvserie.overview;
+            var tvHtml =
+                `
+                <div class="col-md-6">
+                    <div class="popular_2i1 row">
+                        <div class="col-md-4 col-4">
+                            <div class="popular_2i1lm position-relative clearfix">
+                                <div class="popular_2i1lm1 clearfix">
+                                    <div class="grid">
+                                        <figure class="mb-0">
+                                            <a href="#"><img src="data:image/jpeg;base64,${tvserie.poster}" class="w-100" alt="img25"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="popular_2i1r">
+                                <h5><a class="col_red" href="#">${tvserie.title}</a></h5>
+                                <h6>${tvserie.genre_names.join(', ')}</h6>
+                                <h6> Imdb ${tvserie.rating} <span class="ms-2"><i
+                                            class="fa fa-star col_red me-1"></i></span> Year : ${tvserie.release_year} <span
+                                        class="ms-2">Number of Seasons: ${tvserie.noOfSeason}</span></h6>
+                                <p>${truncatedOverview}</p>
+                                <h6 class="mb-0"><a class="button" href="tvseriesdetail.html?tvId=${tvserie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container2.append(tvHtml);
+        }
+	}
+
+
+});
+</script>
+
+<script>
+$(document).ready(function () {
+    // Make an AJAX request to fetch trending movies from your Express server
+    $.ajax({
+        url: 'http://localhost:3000/api/justArrivedSection',
+        method: 'GET',
+        success: function (data) {
+            console.log('Received data:', data);
+
+            if (data.movies.length > 0 && data.tvSeries.length > 0) {
+                displayMovies(data.movies);
+				displayTvSeries(data.tvSeries);
+            } else {
+                console.error('No data found.');
+            }
+        },
+        error: function (error) {
+            console.error('Error fetching trending data:', error);
+            // Handle error, show a message, etc.
+        },
+    });
+
+    function displayMovies(movies) {
+        var container = $('#movies_justarrived');
+
+        for (var i = 0; i < movies.length; i++) {
+            var movie = movies[i];
+			 var truncatedOverview = movie.overview.length > 100 ?
+            movie.overview.substring(0, 100) + '...' :
+            movie.overview;
+            var movieHtml =
+                `
+                <div class="col-md-6">
+                    <div class="popular_2i1 row">
+                        <div class="col-md-4 col-4">
+                            <div class="popular_2i1lm position-relative clearfix">
+                                <div class="popular_2i1lm1 clearfix">
+                                    <div class="grid">
+                                        <figure class="mb-0">
+                                            <a href="#"><img src="data:image/jpeg;base64,${movie.poster}" class="w-100" alt="img25"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="popular_2i1r">
+                                <h5><a class="col_red" href="#">${movie.title}</a></h5>
+                                <h6>${movie.genre_names.join(', ')}</h6>
+                                <h6> Imdb ${movie.rating} <span class="ms-2"><i
+                                            class="fa fa-star col_red me-1"></i></span> Year : ${movie.release_year} <span
+                                        class="ms-2">Runtime: ${movie.runtime}</span></h6>
+                                <p>${truncatedOverview}</p>
+                                <h6 class="mb-0"><a class="button" href="moviedetail.html?movieId=${movie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.append(movieHtml);
+        }
+    }
+
+	function displayTvSeries(tvseries){
+		  var container = $('#tvseries_justarrived');
+
+        for (var i = 0; i < tvseries.length; i++) {
+            var tvserie = tvseries[i];
+			 var truncatedOverview = tvserie.overview.length > 100 ?
+            tvserie.overview.substring(0, 100) + '...' :
+            tvserie.overview;
+            var tvHtml =
+                `
+                <div class="col-md-6">
+                    <div class="popular_2i1 row">
+                        <div class="col-md-4 col-4">
+                            <div class="popular_2i1lm position-relative clearfix">
+                                <div class="popular_2i1lm1 clearfix">
+                                    <div class="grid">
+                                        <figure class="mb-0">
+                                            <a href="#"><img src="data:image/jpeg;base64,${tvserie.poster}" class="w-100" alt="img25"></a>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-8">
+                            <div class="popular_2i1r">
+                                <h5><a class="col_red" href="#">${tvserie.title}</a></h5>
+                                <h6>${tvserie.genre_names.join(', ')}</h6>
+                                <h6> Imdb ${tvserie.rating} <span class="ms-2"><i
+                                            class="fa fa-star col_red me-1"></i></span> Year : ${tvserie.release_year} <span
+                                        class="ms-2">Number of Seasons: ${tvserie.noOfSeason}</span></h6>
+                                <p>${truncatedOverview}</p>
+                                <h6 class="mb-0"><a class="button" href="tvseriesdetail.html?tvId=${tvserie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.append(tvHtml);
+        }
+	}
+
+});
+</script>
+
+<script>
+$(document).ready(function () {
+    // Make an AJAX request to fetch trending movies from your Express server
+    $.ajax({
+        url: 'http://localhost:3000/api/popularMovies', // Use a relative URL
+        method: 'GET',
+        success: function (data) {
+            console.log('Received data:', data);
+			
+            if (data.length > 0) {
+                displayMoviesCarousel(data);
+                updateIndicators(data.length);
+				  
+            } else {
+                console.error('No movies found.');
+            }
+        },
+        error: function (error) {
+            console.error('Error fetching trending movies:', error);
+            // Handle error, show a message, etc.
+        },
+    });
+
+    function displayMoviesCarousel(movies) {
+        var carouselInner = $('#center .carousel-inner');
+
+        movies.forEach(function (movie, index) {
+            var isActive = index === 0 ? 'active' : '';
+            var genreTags = movie.genre_names.map(genre => `<span class="bg_red p-2 pe-4 ps-4 ms-3 text-white d-inline-block">${genre}</span>`).join(' ');
+            var carouselItem = `
+                <div class="carousel-item ${isActive}">
+                    <img src="data:image/jpeg;base64,${movie.background}" class="d-block w-100" alt="${movie.title}" loading="lazy">
+                    <div class="carousel-caption d-md-block">
+                        <h1 class="font_60">${movie.title}</h1>
+                        <h6 class="mt-3">
+                            <span class="col_red me-3">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </span>
+                            ${movie.rating} (Imdb) Year : ${movie.release_year}
+                            ${genreTags}
+                        </h6>
+                        <p class="mt-3">${movie.overview}.</p>
+                        <p class="mb-2"><span class="col_red me-1 fw-bold">Starring:</span> ${movie.actors_names.join(', ')}</p>
+                        <p class="mb-2"><span class="col_red me-1 fw-bold">Genres:</span> ${movie.genre_names.join(', ')}</p>
+                        <p><span class="col_red me-1 fw-bold">Runtime:</span> ${movie.runtime}</p>
+                        <h6 class="mt-4"><a class="button" href="moviedetail.html?movieId=${movie.id}"><i class=" align-middle"></i> More Info</a></h6>
+                    </div>
+                </div>
+            `;
+
+            carouselInner.append(carouselItem);
+        });
+
+    }
+
+    function updateIndicators(numIndicators) {
+        var indicatorsContainer = $('#center .carousel-indicators');
+        indicatorsContainer.empty();
+
+        for (var i = 0; i < numIndicators; i++) {
+            var indicator = $('<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="' + i + '" ' + (i === 0 ? 'class="active"' : '') + ' aria-label="Slide ' + (i + 1) + '"></button>');
+            indicatorsContainer.append(indicator);
+        }
+    }
+});
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Make an AJAX request to fetch popular movies from your Express server
+        $.ajax({
+            url: 'http://localhost:3000/api/popularMoviesController', // Update the URL to match your server endpoint
+            method: 'GET',
+            success: function (data) {
+                console.log('Received data:', data);
+                if (data.length > 0) {
+                    displayMoviesCarousel(data);
+                    updateIndicators(data.length);
+                } else {
+                    console.error('No movies found.');
+                }
+            },
+            error: function (error) {
+                console.error('Error fetching popular movies:', error);
+                // Handle error, show a message, etc.
+            },
+        });
+
+        function displayMoviesCarousel(movies) {
+            var carouselInner = $('#movies');
+           // carouselInner.empty(); // Clear existing content
+
+            for (var i = 0; i < movies.length; i += 4) {
+                var isActive = i === 0 ? 'active' : '';
+
+                var carouselItem = `
+                    <div class="carousel-item ${isActive}">
+                        <div class="trend_2i row">
+                            ${generateMovieHTML(movies, i)}
+                        </div>
+                    </div>
+                `;
+
+                carouselInner.append(carouselItem);
+            }
+        }
+
+        function generateMovieHTML(movies, startIndex) {
+            var movieHTML = '';
+
+            for (var i = startIndex; i < Math.min(startIndex + 4, movies.length); i++) {
+                var movie = movies[i];
+                var genreTags = movie.genre_names.slice(0, 2).join(', '); // Join first two genres with a comma
+                 var truncatedOverview = truncateOverview(movie.overview,2);
+                var starRating = generateStarRating(movie.rating);
+
+                movieHTML += `
+                    <div class="col-md-3 col-6">
+                        <div class="trend_2im clearfix position-relative">
+                            <div class="trend_2im1 clearfix">
+                                <div class="grid">
+                                    <figure class="effect-jazz mb-0">
+                                        <a href="#"><img src="data:image/jpeg;base64,${movie.background}" class="w-100" alt="${movie.title}"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend_2ilast bg_grey p-3 clearfix">
+                            <h5><a class="col_red" href="#" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; max-width: 100%;">${movie.title}</a></h5>
+                            <h6 class="mb-0">${genreTags}</h6> <!-- Display genres side by side with a comma -->
+                            <p class="mb-2">${truncatedOverview}</p> <!-- Display truncated overview -->
+                            <span class="col_red">
+                                ${starRating}
+                            </span>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="mb-0">Year: ${movie.release_year}</p>
+                                <h6 class="mb-0"><a class="button" href="moviedetail.html?movieId=${movie.id}"> More Info</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            return movieHTML;
+        }
+
+        function updateIndicators(numIndicators) {
+            var indicatorsContainer = $('#carouselExampleCaptions1 .carousel-indicators');
+            indicatorsContainer.empty();
+
+            for (var i = 0; i < Math.ceil(numIndicators / 4); i++) {
+                var indicator = $('<button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="' + i + '" ' + (i === 0 ? 'class="active"' : '') + ' aria-label="Slide ' + (i + 1) + '"></button>');
+                indicatorsContainer.append(indicator);
+            }
+        }
+
+        function generateStarRating(rating) {
+            var starRating = '';
+            var fullStars = Math.floor(rating);
+            var halfStar = (rating % 1 !== 0);
+
+            for (var i = 0; i < fullStars; i++) {
+                starRating += '<i class="fa fa-star"></i>';
+            }
+
+            if (halfStar) {
+                starRating += '<i class="fa fa-star-half-o"></i>';
+                fullStars++; // Increment fullStars to ensure the total stars match the rating
+            }
+
+            for (var j = fullStars; j < 5; j++) {
+                starRating += '<i class="fa fa-star-o"></i>';
+            }
+
+            return starRating;
+        }
+
+        function truncateOverview(overview, numLines) {
+            // Use CSS to limit the number of lines
+            return  ` <div style="-webkit-line-clamp: ${numLines}; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical;">${overview}</div> `;
+        }
+
+       
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        // Make an AJAX request to fetch trending TV series from your Express server
+        $.ajax({
+            url: 'http://localhost:3000/api/latestTVSeriesController', // Update the URL to match your server endpoint
+            method: 'GET',
+            success: function (data) {
+                console.log('Received TV series data:', data);
+                if (data.length > 0) {
+                    displayTVSeriesCarousel(data);
+                    updateIndicators(data.length);
+                } else {
+                    console.error('No TV series found.');
+                }
+            },
+            error: function (error) {
+                console.error('Error fetching trending TV series:', error);
+                // Handle error, show a message, etc.
+            },
+        });
+
+        function displayTVSeriesCarousel(tvSeries) {
+            var carouselInner = $('#tvseries');
+           // carouselInner.empty(); // Clear existing content
+
+            for (var i = 0; i < tvSeries.length; i += 4) {
+                var isActive = i === 0 ? 'active' : '';
+
+                var carouselItem = `
+                    <div class="carousel-item ${isActive}">
+                        <div class="trend_2i row">
+                            ${generateTVSeriesHTML(tvSeries, i)}
+                        </div>
+                    </div>
+                `;
+
+                carouselInner.append(carouselItem);
+            }
+        }
+
+        function generateTVSeriesHTML(tvSeries, startIndex) {
+            var tvSeriesHTML = '';
+
+            for (var i = startIndex; i < Math.min(startIndex + 4, tvSeries.length); i++) {
+                var series = tvSeries[i];
+                var genreTags = series.genre_names.slice(0, 2).join(', '); // Join first two genres with a comma
+                 var truncatedOverview = truncateOverview(series.overview,2);
+                var starRating = generateStarRating(series.rating);
+
+                tvSeriesHTML += `
+                    <div class="col-md-3 col-6">
+                        <div class="trend_2im clearfix position-relative">
+                            <div class="trend_2im1 clearfix">
+                                <div class="grid">
+                                    <figure class="effect-jazz mb-0">
+                                        <a href="#"><img src="data:image/jpeg;base64,${series.background}" class="w-100" alt="${series.title}"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="trend_2ilast bg_grey p-3 clearfix">
+                                <h5><a class="col_red" href="#" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; max-width: 100%;">${series.title}</a></h5>
+                                <h6 class="mb-0">${genreTags}</h6>
+                                <p class="mb-2">${truncatedOverview}</p>
+                                <span class="col_red">
+                                    ${starRating}
+                                </span>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="mb-0">Year: ${series.release_year}</p>
+                                    <h6 class="mb-0"><a class="button" href="tvseriesdetail.html?tvId=${series.id}">More Info</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            return tvSeriesHTML;
+        }
+
+        function updateIndicators(numIndicators) {
+            var indicatorsContainer = $('#carouselIndicators');
+            indicatorsContainer.empty();
+
+            for (var i = 0; i < Math.ceil(numIndicators / 4); i++) {
+                var indicator = $('<button type="button" data-bs-target="#carouselExampleCaptions1" data-bs-slide-to="' + i + '" ' + (i === 0 ? 'class="active"' : '') + ' aria-label="Slide ' + (i + 1) + '"></button>');
+                indicatorsContainer.append(indicator);
+            }
+        }
+
+        function generateStarRating(rating) {
+            var starRating = '';
+            var fullStars = Math.floor(rating);
+            var halfStar = (rating % 1 !== 0);
+
+            for (var i = 0; i < fullStars; i++) {
+                starRating += '<i class="fa fa-star"></i>';
+            }
+
+            if (halfStar) {
+                starRating += '<i class="fa fa-star-half-o"></i>';
+                fullStars++; // Increment fullStars to ensure the total stars match the rating
+            }
+
+            for (var j = fullStars; j < 5; j++) {
+                starRating += '<i class="fa fa-star-o"></i>';
+            }
+
+            return starRating;
+        }
+
+           function truncateOverview(overview, numLines) {
+            // Use CSS to limit the number of lines
+            return  ` <div style="-webkit-line-clamp: ${numLines}; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical;">${overview}</div> `;
+        }
+
+
+    });
+</script>
+
+
+</body>
+
+</html>

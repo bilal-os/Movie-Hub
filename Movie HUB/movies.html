@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movie Hub</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body>
+
+    	<section id="top">
+		<div class="container">
+			<div class="row top_1">
+				<div class="col-md-3">
+					<div class="top_1l pt-1">
+						<h3 class="mb-0"><a class="text-white" href="index.html"><i
+									class="fa fa-video-camera col_red me-1"></i> Movie Hub</a></h3>
+					</div>
+				</div>
+                
+				 <div class="col-md-5">
+                        <div class="top_1m">
+                            <div class="input-group" id="DynSearchBar">
+                                <input type="text" class="form-control bg-black" placeholder="Search Site..."
+                                    id="SearchBar">
+                                <span class="input-group-btn">
+                                    <button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+                                        Search
+                                    </button>
+                                </span>
+                            </div>
+                            <div id="searchitemscontainer" style="position:absolute; width: 459px; z-index: 1000;">
+                                <ul class="custom_drop" id="itemsContainer"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+				<div class="col-md-4">
+					<div class="top_1r text-end">
+						<ul class="social-network social-circle mb-0">
+							<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section id="header">
+		<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+			<div class="container">
+				<a class="navbar-brand text-white fw-bold" href="index.html"><i
+						class="fa fa-video-camera col_red me-1"></i> Movie Hub</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mb-0">
+						<li class="nav-item">
+							<a class="nav-link " aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="movies.html">Browse Movies</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tvseries.html">Browse Tv Series</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+
+<section id="center" class="center_o pt-2 pb-2">
+ <div class="container-xl">
+  <div class="row center_o1">
+   <div class="col-md-5">
+     <div class="center_o1l">
+	  <h2 class="mb-0">Browse Movies</h2>
+	 </div>
+   </div>
+   <div class="col-md-7">
+     <div class="center_o1r text-end">
+	  <h6 class="mb-0 col_red"><a href="#">Home</a> <span class="me-2 ms-2 text-light"><i class="fa fa-caret-right align-middle"></i></span> Browse Movies</h6>
+	 </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+	<section  class="pt-4 pb-5 ">
+ 
+    <div class="container">
+		 <div class=" bg_dark pt-2 pb-2 mb-4">
+			<section id="searchbar" class="text-center mt-2">
+    
+        <div class="row justify-content-center"> <!-- Added justify-content-center class -->
+            <div class="col-md-8"> <!-- Adjusted column width for centering -->
+                <div class="input-group">
+                    <input id="searchInput" type="text" class="form-control bg-black" placeholder="Search Movies...">
+                    <span class="input-group-btn">
+                        <button id="searchButton" class="btn btn text-white bg_red rounded-0 border-0" type="button">
+                            Search
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <div class="row justify-content-center mb-3">
+            <div class="col-md-3 mb-1">
+               <div class="dropdown">
+    <button class="btn btn text-white bg_red rounded-0 border-0 dropdown-toggle" type="button" id="filterDropdown1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select a Genre
+    </button>
+    <ul  class="dropdown-menu drop_1" aria-labelledby="filterDropdown1" style="max-height: 400px; overflow-y: auto;">
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Action', 'filterDropdown1')">Action</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Adventure', 'filterDropdown1')">Adventure</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Animation', 'filterDropdown1')">Animation</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Comedy', 'filterDropdown1')">Comedy</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Crime', 'filterDropdown1')">Crime</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Documentary', 'filterDropdown1')">Documentary</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Drama', 'filterDropdown1')">Drama</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Family', 'filterDropdown1')">Family</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Fantasy', 'filterDropdown1')">Fantasy</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('History', 'filterDropdown1')">History</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Horror', 'filterDropdown1')">Horror</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Music', 'filterDropdown1')">Music</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Mystery', 'filterDropdown1')">Mystery</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Romance', 'filterDropdown1')">Romance</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Science Fiction', 'filterDropdown1')">Science Fiction</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Thriller', 'filterDropdown1')">Thriller</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('TV Movie', 'filterDropdown1')">TV Movie</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('War', 'filterDropdown1')">War</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('Western', 'filterDropdown1')">Western</a></li>
+    </ul>
+</div>
+
+<script>
+    function updateButton(value, dropdownId) {
+        document.getElementById(dropdownId).innerText = value;
+    }
+</script>
+
+            </div>
+
+            <div class="col-md-3 mb-1">
+                <!-- Repeat the structure for additional filters -->
+                <!-- Example: Another dropdown -->
+                <div class="dropdown">
+    <button class="btn btn text-white bg_red rounded-0 border-0 dropdown-toggle" type="button" id="filterDropdown2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select the rating
+    </button>
+    <ul  class="dropdown-menu drop_1" aria-labelledby="filterDropdown2">
+        <li><a class="dropdown-item" href="#" onclick="updateButton('9', 'filterDropdown2')">9+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('8', 'filterDropdown2')">8+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('7', 'filterDropdown2')">7+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('6', 'filterDropdown2')">6+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('5', 'filterDropdown2')">5+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('4', 'filterDropdown2')">4+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('3', 'filterDropdown2')">3+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2', 'filterDropdown2')">2+</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('1', 'filterDropdown2')">1+</a></li>
+        <!-- Add more filters as needed -->
+    </ul>
+</div>
+            </div>
+
+            <div class="col-md-3 mb-1">
+                <div class="dropdown">
+    <button class="btn btn text-white bg_red rounded-0 border-0 dropdown-toggle" type="button" id="filterDropdown3" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select a Year
+    </button>
+    <ul  class="dropdown-menu drop_1" aria-labelledby="filterDropdown3" style="max-height: 400px; overflow-y: auto;">
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2000', 'filterDropdown3')">2000</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2001', 'filterDropdown3')">2001</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2002', 'filterDropdown3')">2002</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2003', 'filterDropdown3')">2003</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2004', 'filterDropdown3')">2004</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2005', 'filterDropdown3')">2005</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2006', 'filterDropdown3')">2006</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2007', 'filterDropdown3')">2007</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2008', 'filterDropdown3')">2008</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2009', 'filterDropdown3')">2009</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2010', 'filterDropdown3')">2010</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2011', 'filterDropdown3')">2011</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2012', 'filterDropdown3')">2012</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2013', 'filterDropdown3')">2013</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2014', 'filterDropdown3')">2014</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2015', 'filterDropdown3')">2015</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2016', 'filterDropdown3')">2016</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2017', 'filterDropdown3')">2017</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2018', 'filterDropdown3')">2018</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2019', 'filterDropdown3')">2019</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2020', 'filterDropdown3')">2020</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2021', 'filterDropdown3')">2021</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2022', 'filterDropdown3')">2022</a></li>
+        <li><a class="dropdown-item" href="#" onclick="updateButton('2023', 'filterDropdown3')">2023</a></li>
+    </ul>
+</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateButton(value, dropdownId) {
+        document.getElementById(dropdownId).innerText = value;
+    }
+</script>
+
+
+			</section>
+
+		  </div>
+        <div id="movies" class="row trend_1">
+              
+        </div>
+       
+</section>
+
+<div class="pages mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="mb-0 pagination justify-content-center">
+                    <li><a href="blog_detail.html"><i class="fa fa-chevron-left"></i></a></li>
+                    <li><a class="act" href="blog_detail.html">1</a></li>
+                    <li><a href="blog_detail.html">2</a></li>
+                    <li><a href="blog_detail.html">3</a></li>
+                    <li><a href="blog_detail.html">4</a></li>
+                    <li><a href="blog_detail.html">5</a></li>
+                    <li><a href="blog_detail.html">6</a></li>
+                    <li><a href="blog_detail.html"><i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section id="footer">
+		<div class="footer_m clearfix">
+			<div class="container">
+				<div class="row footer_1">
+					<div class="col-md-4">
+						<div class="footer_1i">
+							<h3><a class="text-white" href="index.html"><i class="fa fa-video-camera col_red me-1"></i>
+									Movie Hub</a></h3>
+							<p class="mt-3">Welcome to our movie hub! We love watching films and are thrilled about
+								sharing the greatest ones. Explore our website for ratings, teasers, and excellent
+								suggestions in every genre. </p>
+							<h6 class="fw-normal"><i class="fa fa-map-marker fs-5 align-middle col_red me-1"></i> Fast
+								Nuces Lahore, Pakistan</h6>
+							<h6 class="fw-normal mt-3"><i class="fa fa-envelope fs-5 align-middle col_red me-1"></i>
+								info@gmail.com</h6>
+							<h6 class="fw-normal mt-3 mb-0"><i class="fa fa-phone fs-5 align-middle col_red me-1"></i>
+								+123 123 456</h6>
+						</div>
+					</div>
+					<div class="col-md-4">
+						
+					</div>
+					<div class="col-md-4">
+						<div class="footer_1i">
+							<h4>Sign <span class="col_red">Newsletter</span></h4>
+							<p class="mt-3">Subscribe to our newsletter list to get latest news and updates from us</p>
+							<div class="input-group">
+								<input type="text" class="form-control bg-black" placeholder="Email">
+								<span class="input-group-btn">
+									<button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+										Subscribe</button>
+								</span>
+							</div>
+							<ul class="social-network social-circle mb-0 mt-4">
+								<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a>
+								</li>
+								<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<section id="footer_b" class="pt-3 pb-3 bg_grey">
+<div class="container">
+   <div class="row footer_1">
+     <div class="col-md-8">
+	  <div class="footer_1l">
+	   <p class="mb-0">© 2023 Movie Hub. All Rights Reserved </p>
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="footer_1r">
+	   <ul class="mb-0">
+	    <li class="d-inline-block me-2"><a href="index.html">Home</a></li>
+		<li class="d-inline-block me-2"><a href="movies.html">Browse Movies</a></li>
+		<li class="d-inline-block me-2"><a href="tvseries.html">Browse TV Series</a></li>
+		<li class="d-inline-block me-2"><a href="contact.html">Contact Us</a></li>
+	   </ul>
+	  </div>
+	 </div>
+   </div>
+</div>
+</section>
+
+
+	<script>
+		window.onscroll = function () { myFunction() };
+
+		var navbar_sticky = document.getElementById("navbar_sticky");
+		var sticky = navbar_sticky.offsetTop;
+		var navbar_height = document.querySelector('.navbar').offsetHeight;
+
+		function myFunction() {
+			if (window.pageYOffset >= sticky + navbar_height) {
+				navbar_sticky.classList.add("sticky")
+				document.body.style.paddingTop = navbar_height + 'px';
+			} else {
+				navbar_sticky.classList.remove("sticky");
+				document.body.style.paddingTop = '0'
+			}
+		}
+	</script>
+
+<script>
+    $(document).ready(function () {
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+        const moviesPerPage = 12;
+        let currentPage = 1;
+        let moviesData = []; // Store all movie data
+
+         function fetchData(searchData) {
+            console.log('searchdata',searchData);
+            $.ajax({
+                url: 'http://localhost:3000/api/browseMovies',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(searchData),
+                success: function (data) {
+                    console.log('Received movie data:', data);
+                    if (data && data.length > 0) {
+                        moviesData = data;
+                        updatePagination();
+                        displayMovies(currentPage);
+                    } else {
+                        console.error('No valid data received from the server.');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error fetching movies:', error);
+                    // Handle error, show a message, etc.
+                },
+            });
+        }
+
+      // Function to handle search button click
+function handleSearch() {
+    const inputValue = searchInput.value;
+    console.log('Search Query:', inputValue);
+
+    // Get the selected values from the dropdowns
+    const selectedGenre = $('#filterDropdown1').text();  // Use .text() for jQuery element
+    const selectedRating = $('#filterDropdown2').text(); // Use .text() for jQuery element
+    const selectYear = $('#filterDropdown3').text(); // Use .text() for jQuery element
+
+    const searchData = {};
+    if (inputValue.trim() !== '') {
+        searchData.searchText = inputValue; // Use 'searchText' instead of 'searchQuery'
+    }
+    if (selectedGenre.trim() !== 'Select a Genre') {
+        searchData.genre = selectedGenre;
+    }
+    if (selectedRating.trim() !== 'Select the rating') {
+        searchData.rating = selectedRating;
+    }
+    if (selectYear.trim() !== 'Select a Year') {
+        searchData.year = selectYear;
+    }
+
+    console.log('Search Data:', JSON.stringify(searchData, null, 2));
+
+
+    // Fetch data based on search criteria
+    fetchData(searchData);
+}
+
+
+        fetchData({});
+
+        // Event listener for search button click
+        searchButton.addEventListener('click', handleSearch);
+
+           function displayMovies(page) {
+            var moviesContainer = $('#movies');
+            if (!moviesContainer.length) {
+                console.error('Movies container not found on the page.');
+                return;
+            }
+
+            var startIndex = (page - 1) * moviesPerPage;
+            var endIndex = startIndex + moviesPerPage;
+            var displayedMovies = moviesData.slice(startIndex, endIndex);
+
+            moviesContainer.empty();
+
+            for (var i = 0; i < displayedMovies.length; i++) {
+				var mtClass = i > 3 ? 'mt-4' : '';
+                var movie = displayedMovies[i];
+                var genreTags = movie.genre_names.slice(0, 2).join(', ');
+				var truncatedTitle = truncateTitle(movie.title, 24);
+                var movieHTML = `
+                    <div class="col-md-3 col-6 ${mtClass}">
+                        <div class="trend_2im clearfix position-relative">
+                            <div class="trend_2im1 clearfix">
+                                <div class="grid">
+                                    <figure class="effect-jazz mb-0">
+										<a href="#"><img src="data:image/jpeg;base64,${movie.background}" class="w-100" alt="${movie.title}"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="trend_2ilast bg_grey p-3 clearfix">
+                                <h5><a class="col_red" href="#" title="${movie.title}">${truncatedTitle}</a></h5>
+                                <h6>${genreTags}</h6>
+                                <p class="mb-2" style="white-space: pre-line; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">${movie.overview}</p>
+                                <span class="col_red">
+                                    ${generateStarRating(movie.rating)}
+                                </span>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="mb-0">Year: ${movie.release_year}</p>
+                                    <h6 class="mb-0"><a class="button" href="moviedetail.html?movieId=${movie.id}">More Info</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                moviesContainer.append(movieHTML);
+            }
+        }
+
+        function generateStarRating(rating) {
+            var starRating = '';
+
+            for (var i = 0; i < 5; i++) {
+                starRating += i < rating ? '<i class="fa fa-star"></i>' : '<i class="fa fa-star-o"></i>';
+            }
+
+            return starRating;
+        }
+
+		function truncateTitle(title, limit) {
+    if (title.length > limit) {
+        return title.substring(0, limit) + '...';
+    } else {
+        return title;
+    }
+}
+
+function updatePagination() {
+    var totalPages = Math.ceil(moviesData.length / moviesPerPage);
+    var paginationContainer = $('.pagination');
+
+    paginationContainer.empty();
+
+    // Calculate the range of buttons to display
+    var startPage = Math.max(1, currentPage - 5); // Start from the current page - 5, but not less than 1
+    var endPage = Math.min(totalPages, startPage + 5); // Display up to 6 pages or less if total pages are less than 6
+
+    // Previous Page Arrow
+    var prevArrow = `<li><a href="#" class="prevPage"><i class="fa fa-chevron-left"></i></a></li>`;
+    paginationContainer.append(prevArrow);
+
+    for (var i = startPage; i <= endPage; i++) {
+        var pageLink = i === currentPage ? `<li><a class="act" href="#">${i}</a></li>` : `<li><a href="#">${i}</a></li>`;
+        paginationContainer.append(pageLink);
+    }
+
+    // Next Page Arrow
+    var nextArrow = `<li><a href="#" class="nextPage"><i class="fa fa-chevron-right"></i></a></li>`;
+    paginationContainer.append(nextArrow);
+
+    // Attach click event to pagination buttons
+    paginationContainer.find('a').on('click', function (e) {
+        e.preventDefault();
+
+        if ($(this).hasClass('prevPage')) {
+            currentPage = Math.max(1, currentPage - 1);
+        } else if ($(this).hasClass('nextPage')) {
+            currentPage = Math.min(totalPages, currentPage + 1);
+        } else {
+            currentPage = parseInt($(this).text(), 10);
+        }
+
+        displayMovies(currentPage);
+        updatePagination();
+    });
+}
+
+    });
+
+
+</script>
+
+
+<script>
+    // Define a separate module for search functionality
+    var SearchModule = (function ($) {
+        // Private variables
+        var customDrop = $(".custom_drop");
+        var resultsContainer = $("#itemsContainer");
+
+        // Private function to handle the AJAX request
+        function performSearch(searchTerm) {
+            $.ajax({
+                url: 'http://localhost:3000/api/searchbar',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ searchTerm: searchTerm }),
+                success: function (data) {
+                    displaySearchResults(data);
+                },
+                error: function (error) {
+                    console.error('Error fetching search results:', error);
+                }
+            });
+        }
+
+        // Private function to display search results
+        function displaySearchResults(data) {
+            resultsContainer.empty();
+
+                 for (var i = 0; i < data.length; i++) {
+            // Create a clickable link with movie ID as a data attribute
+            var listItem = $('<li><a class="dropdown-item" href="#" data-movie-id="' + data[i].id + '">' +
+                data[i].title + ' ' + data[i].release_year +
+                '</a></li>');
+
+            // Attach a click event to the link
+            listItem.find('a').on('click', function (event) {
+                event.preventDefault();
+                var movieId = $(this).data('movie-id');
+                // Redirect to another HTML page with the movie ID
+                window.location.href = 'moviedetail.html?movieId=' + movieId;
+            });
+
+            resultsContainer.append(listItem);
+        }
+            // Toggle the 'active' class based on the search results
+            customDrop.toggleClass("active", resultsContainer.children().length > 0);
+        }
+
+        // Public function to handle keyup event on the search bar
+        function handleSearchKeyup() {
+            var searchTerm = $("#SearchBar").val().toLowerCase().trim();
+
+            if (searchTerm.length > 0) {
+                performSearch(searchTerm);
+            } else {
+                // Clear results and hide dropdown if search term is empty
+                resultsContainer.empty();
+                customDrop.removeClass("active");
+            }
+        }
+
+        // Public function to initialize the search module
+        function init() {
+            $("#SearchBar").keyup(handleSearchKeyup);
+        }
+
+        // Return public functions
+        return {
+            init: init
+        };
+    })(jQuery);
+
+    // Initialize the search module
+    $(document).ready(function () {
+        SearchModule.init();
+    });
+</script>
+
+    </body>

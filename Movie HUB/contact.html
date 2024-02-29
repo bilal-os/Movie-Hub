@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movie Hub</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+       	<section id="top">
+		<div class="container">
+			<div class="row top_1">
+				<div class="col-md-3">
+					<div class="top_1l pt-1">
+						<h3 class="mb-0"><a class="text-white" href="index.html"><i
+									class="fa fa-video-camera col_red me-1"></i> Movie Hub</a></h3>
+					</div>
+				</div>
+                
+				 <div class="col-md-5">
+                        <div class="top_1m">
+                            <div class="input-group" id="DynSearchBar">
+                                <input type="text" class="form-control bg-black" placeholder="Search Site..."
+                                    id="SearchBar">
+                                <span class="input-group-btn">
+                                    <button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+                                        Search
+                                    </button>
+                                </span>
+                            </div>
+                            <div id="searchitemscontainer" style="position:absolute; width: 459px; z-index: 1000;">
+                                <ul class="custom_drop" id="itemsContainer"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+				<div class="col-md-4">
+					<div class="top_1r text-end">
+						<ul class="social-network social-circle mb-0">
+							<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section id="header">
+		<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+			<div class="container">
+				<a class="navbar-brand text-white fw-bold" href="index.html"><i
+						class="fa fa-video-camera col_red me-1"></i> Movie Hub</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mb-0">
+						<li class="nav-item">
+							<a class="nav-link " aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="movies.html">Browse Movies</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tvseries.html">Browse Tv Series</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+<section id="center" class="center_o pt-2 pb-2">
+ <div class="container-xl">
+  <div class="row center_o1">
+   <div class="col-md-5">
+     <div class="center_o1l">
+	  <h2 class="mb-0">Contact</h2>
+	 </div>
+   </div>
+   <div class="col-md-7">
+     <div class="center_o1r text-end">
+	  <h6 class="mb-0 col_red"><a href="#">Home</a> <span class="me-2 ms-2 text-light"><i class="fa fa-caret-right align-middle"></i></span> Contact</h6>
+	 </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="contact" class="pt-4 pb-4 bg_grey">
+ <div class="container-xl">
+  <div class="row contact_1 bg_dark  pt-5 pb-5">
+   <div class="col-md-3">
+    <div class="contact_1i row">
+	 <div class="col-md-2 col-2">
+	  <div class="contact_1il">
+	   <span class="col_red fs-3"><i class="fa fa-map-marker"></i></span>
+	  </div>
+	 </div>
+	 <div class="col-md-10 col-10">
+	  <div class="contact_1ir">
+	   <h5 class="col_red">Company Address</h5>
+	   <p class="mb-0">FAST NUCES, LAHORE</p>
+	  </div>
+	 </div>
+	</div>
+   </div>   
+   <div class="col-md-3">
+    <div class="contact_1i row">
+	 <div class="col-md-2 col-2">
+	  <div class="contact_1il">
+	   <span class="col_red fs-3"><i class="fa fa-clock-o"></i></span>
+	  </div>
+	 </div>
+	 <div class="col-md-10 col-10">
+	  <div class="contact_1ir">
+	   <h5 class="col_red">Office Hours</h5>
+	   <p class="mb-0">Monday To Saturday - 10.00 - 07.00</p>
+	   <p class="mb-0">Sunday - Closed</p>
+	  </div>
+	 </div>
+	</div>
+   </div>
+   <div class="col-md-3">
+    <div class="contact_1i row">
+	 <div class="col-md-2 col-2">
+	  <div class="contact_1il">
+	   <span class="col_red fs-3"><i class="fa fa-envelope"></i></span>
+	  </div>
+	 </div>
+	 <div class="col-md-10 col-10">
+	  <div class="contact_1ir">
+	   <h5 class="col_red">E-mail</h5>
+	   <p class="mb-0">info@gmail.com</p>
+	   <p class="mb-0">info@gmail.com</p>
+	  </div>
+	 </div>
+	</div>
+   </div>
+   <div class="col-md-3">
+    <div class="contact_1i row">
+	 <div class="col-md-2 col-2">
+	  <div class="contact_1il">
+	   <span class="col_red fs-3"><i class="fa fa-phone"></i></span>
+	  </div>
+	 </div>
+	 <div class="col-md-10 col-10">
+	  <div class="contact_1ir">
+	   <h5 class="col_red">Phone Numbers</h5>
+	   <p class="mb-0">+123 123 456</p>
+	   <p class="mb-0">+123 123 456</p>
+	  </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+  <div class="row contact_2 mt-4">
+   <div class="col-md-3">
+    <div class="contact_2r">
+	  <h5 class="mb-3">LAHORE OFFICE</h5>
+	  <p><i class="fa fa-car col_red me-1"></i> FAST NUCES, LAHORE</p>
+	  <p><i class="fa fa-phone col_red me-1"></i> +123 123 456</p>
+	   <p><i class="fa fa-globe col_red me-1"></i> <a href="#">info@gmail.com</a></p>
+	    <p><i class="fa fa-envelope col_red me-1"></i> <a href="#">info@gmail.com</a></p>
+		<h5 class="mb-3 mt-4">BUSINESS HOURS</h5>
+		<p>Hotline is available for 24 hours a day!..</p>
+		<p>Monday – Friday : <span class="fw-bold text-white">9am to 7pm</span></p>
+		<p>Saturday : <span class="fw-bold text-white">11am to 3pm</span></p>
+		<p>Sunday : <span class="fw-bold text-white">Closed</span></p>
+	</div>
+   </div>
+   <div class="col-md-9">
+    <div class="contact_2l row">
+	 <div class="col-md-12">
+	  <h4>GET IN TOUCH</h4>
+	 </div> 
+	</div>
+	<div class="contact_2l1 mt-3 row">
+	 <div class="col-md-6">
+	  <div class="contact_2l1i">
+	    <input id="name_container" class="form-control" placeholder="Name*" type="text" required>
+	  </div>
+	 </div> 
+	
+	 
+	</div>
+	<div class="contact_2l1 mt-3 row">
+	 <div class="col-md-6">
+	  <div class="contact_2l1i">
+	    <input id="email_container" class="form-control" placeholder="EMAIL*" type="text" required>
+	  </div>
+	 </div> 
+	
+	 
+	</div>
+	<div class="contact_2l1 mt-3 row">
+	 <div class="col-md-12">
+	  <div class="contact_2l1i">
+	    <textarea id="comment_container" placeholder="Comment" class="form-control form_text" required></textarea>
+		<h6 class="mt-3 mb-0"><a id="submitBtn" class="button" href="#"> Submit</a></h6>
+	  </div>
+	 </div> 
+	</div>
+   </div>
+  </div>
+  <div class="row contact_3 mt-4">
+   <div class="col-md-12">
+	 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.573001089715!2d74.30105622629684!3d31.480930274232094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903f08ebc7e8b%3A0x47e934f4cd34790!2sFAST%20NUCES%20Lahore!5e0!3m2!1sen!2s!4v1701598618431!5m2!1sen!2s"  height="450" style="border:0; width:100%;" allowfullscreen=""></iframe>
+   </div>
+  </div>
+ </div>
+</section>
+
+	<section id="footer">
+		<div class="footer_m clearfix">
+			<div class="container">
+				<div class="row footer_1">
+					<div class="col-md-4">
+						<div class="footer_1i">
+							<h3><a class="text-white" href="index.html"><i class="fa fa-video-camera col_red me-1"></i>
+									Movie Hub</a></h3>
+							<p class="mt-3">Welcome to our movie hub! We love watching films and are thrilled about
+								sharing the greatest ones. Explore our website for ratings, teasers, and excellent
+								suggestions in every genre. </p>
+							<h6 class="fw-normal"><i class="fa fa-map-marker fs-5 align-middle col_red me-1"></i> Fast
+								Nuces Lahore, Pakistan</h6>
+							<h6 class="fw-normal mt-3"><i class="fa fa-envelope fs-5 align-middle col_red me-1"></i>
+								info@gmail.com</h6>
+							<h6 class="fw-normal mt-3 mb-0"><i class="fa fa-phone fs-5 align-middle col_red me-1"></i>
+								+123 123 456</h6>
+						</div>
+					</div>
+					<div class="col-md-4">
+						
+					</div>
+					<div class="col-md-4">
+						<div class="footer_1i">
+							<h4>Sign <span class="col_red">Newsletter</span></h4>
+							<p class="mt-3">Subscribe to our newsletter list to get latest news and updates from us</p>
+							<div class="input-group">
+								<input type="text" class="form-control bg-black" placeholder="Email">
+								<span class="input-group-btn">
+									<button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+										Subscribe</button>
+								</span>
+							</div>
+							<ul class="social-network social-circle mb-0 mt-4">
+								<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a>
+								</li>
+								<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<section id="footer_b" class="pt-3 pb-3 bg_grey">
+<div class="container">
+   <div class="row footer_1">
+     <div class="col-md-8">
+	  <div class="footer_1l">
+	   <p class="mb-0">© 2023 Movie Hub. All Rights Reserved </p>
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="footer_1r">
+	   <ul class="mb-0">
+	    <li class="d-inline-block me-2"><a href="index.html">Home</a></li>
+		<li class="d-inline-block me-2"><a href="movies.html">Browse Movies</a></li>
+		<li class="d-inline-block me-2"><a href="tvseries.html">Browse TV Series</a></li>
+		<li class="d-inline-block me-2"><a href="contact.html">Contact Us</a></li>
+	   </ul>
+	  </div>
+	 </div>
+   </div>
+</div>
+</section>
+
+	<script>
+		window.onscroll = function () { myFunction() };
+
+		var navbar_sticky = document.getElementById("navbar_sticky");
+		var sticky = navbar_sticky.offsetTop;
+		var navbar_height = document.querySelector('.navbar').offsetHeight;
+
+		function myFunction() {
+			if (window.pageYOffset >= sticky + navbar_height) {
+				navbar_sticky.classList.add("sticky")
+				document.body.style.paddingTop = navbar_height + 'px';
+			} else {
+				navbar_sticky.classList.remove("sticky");
+				document.body.style.paddingTop = '0'
+			}
+		}
+	</script>
+
+<script>
+    // Define a separate module for search functionality
+    var SearchModule = (function ($) {
+        // Private variables
+        var customDrop = $(".custom_drop");
+        var resultsContainer = $("#itemsContainer");
+
+        // Private function to handle the AJAX request
+        function performSearch(searchTerm) {
+            $.ajax({
+                url: 'http://localhost:3000/api/searchbar',
+                method: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ searchTerm: searchTerm }),
+                success: function (data) {
+                    displaySearchResults(data);
+                },
+                error: function (error) {
+                    console.error('Error fetching search results:', error);
+                }
+            });
+        }
+
+        // Private function to display search results
+        function displaySearchResults(data) {
+            resultsContainer.empty();
+
+                 for (var i = 0; i < data.length; i++) {
+            // Create a clickable link with movie ID as a data attribute
+            var listItem = $('<li><a class="dropdown-item" href="#" data-movie-id="' + data[i].id + '">' +
+                data[i].title + ' ' + data[i].release_year +
+                '</a></li>');
+
+            // Attach a click event to the link
+            listItem.find('a').on('click', function (event) {
+                event.preventDefault();
+                var movieId = $(this).data('movie-id');
+                // Redirect to another HTML page with the movie ID
+                window.location.href = 'moviedetail.html?movieId=' + movieId;
+            });
+
+            resultsContainer.append(listItem);
+        }
+            // Toggle the 'active' class based on the search results
+            customDrop.toggleClass("active", resultsContainer.children().length > 0);
+        }
+
+        // Public function to handle keyup event on the search bar
+        function handleSearchKeyup() {
+            var searchTerm = $("#SearchBar").val().toLowerCase().trim();
+
+            if (searchTerm.length > 0) {
+                performSearch(searchTerm);
+            } else {
+                // Clear results and hide dropdown if search term is empty
+                resultsContainer.empty();
+                customDrop.removeClass("active");
+            }
+        }
+
+        // Public function to initialize the search module
+        function init() {
+            $("#SearchBar").keyup(handleSearchKeyup);
+        }
+
+        // Return public functions
+        return {
+            init: init
+        };
+    })(jQuery);
+
+    // Initialize the search module
+    $(document).ready(function () {
+        SearchModule.init();
+    });
+</script>
+
+
+<script>
+	$(document).ready(function () {
+		// Event listener for form submission
+		$("#submitBtn").click(function () {
+			validateForm();
+		});
+	});
+
+	function validateForm() {
+		var name = $("#name_container").val();
+		var email = $("#email_container").val();
+		var comment = $("#comment_container").val();
+		var errorMessage = $("#error-message");
+
+		// Reset previous error message
+		errorMessage.text('');
+
+		// Check if all fields are filled
+		if (!name || !email || !comment) {
+				window.alert("All fields are required.");
+			return;
+		}
+
+		// Check if the email is in the correct format
+		var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(email)) {
+			window.alert("Please enter a valid email address.");
+					return;
+		}
+
+		// If all validations pass, proceed with AJAX request
+		// Get values from input fields
+		const nameValue = $("#name_container").val();
+		const emailValue = $("#email_container").val();
+		const commentValue = $("#comment_container").val();
+
+		// Create data object in JSON format
+		const postData = {
+			name: nameValue,
+			email: emailValue,
+			message: commentValue
+		};
+
+		// Make AJAX POST request
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:3000/api/sendmail", // Replace with your actual API endpoint
+			contentType: "application/json; charset=utf-8",
+			data: JSON.stringify(postData),
+			success: function (response) {
+				console.log("Data posted successfully:", response);
+
+				// Display a prompt message
+				window.alert("Email sent successfully!");
+
+				$("#name_container").val('');
+        $("#email_container").val('');
+        $("#comment_container").val('');
+				// Reload the page
+				window.location.reload();
+			},
+			error: function (error) {
+				console.error("Error posting data:", error);
+				// Handle error, show an error message
+			}
+		});
+	}
+</script>
+
+</body>
+
+</html>

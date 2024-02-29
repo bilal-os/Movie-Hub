@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Movie Hub</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+    	<section id="top">
+		<div class="container">
+			<div class="row top_1">
+				<div class="col-md-3">
+					<div class="top_1l pt-1">
+						<h3 class="mb-0"><a class="text-white" href="index.html"><i
+									class="fa fa-video-camera col_red me-1"></i> Movie Hub</a></h3>
+					</div>
+				</div>
+                
+				 <div class="col-md-5">
+                        <div class="top_1m">
+                            <div class="input-group" id="DynSearchBar">
+                                <input type="text" class="form-control bg-black" placeholder="Search Site..."
+                                    id="SearchBar">
+                                <span class="input-group-btn">
+                                    <button class="btn btn text-white bg_red rounded-0 border-0" type="button">
+                                        Search
+                                    </button>
+                                </span>
+                            </div>
+                            <div id="searchitemscontainer" style="position:absolute; width: 459px; z-index: 1000;">
+                                <ul class="custom_drop" id="itemsContainer"></ul>
+                            </div>
+                        </div>
+                    </div>
+
+				<div class="col-md-4">
+					<div class="top_1r text-end">
+						<ul class="social-network social-circle mb-0">
+							<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section id="header">
+		<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+			<div class="container">
+				<a class="navbar-brand text-white fw-bold" href="index.html"><i
+						class="fa fa-video-camera col_red me-1"></i> Movie Hub</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mb-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">About Us</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Blog
+							</a>
+							<ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="blog.html">Blog</a></li>
+								<li><a class="dropdown-item border-0" href="blog_detail.html">Blog Detail</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="services.html">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="team.html">Team</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Pages
+							</a>
+							<ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="about.html">About Us</a></li>
+								<li><a class="dropdown-item" href="services.html">Services</a></li>
+								<li><a class="dropdown-item" href="team.html">Team</a></li>
+								<li><a class="dropdown-item border-0" href="contact.html">Contact</a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</section>
+
+	<script>
+		window.onscroll = function () { myFunction() };
+
+		var navbar_sticky = document.getElementById("navbar_sticky");
+		var sticky = navbar_sticky.offsetTop;
+		var navbar_height = document.querySelector('.navbar').offsetHeight;
+
+		function myFunction() {
+			if (window.pageYOffset >= sticky + navbar_height) {
+				navbar_sticky.classList.add("sticky")
+				document.body.style.paddingTop = navbar_height + 'px';
+			} else {
+				navbar_sticky.classList.remove("sticky");
+				document.body.style.paddingTop = '0'
+			}
+		}
+	</script>
+
+    <script>
+    $(document).ready(function () {
+    var searchItems = [
+        { title: "Batman", year: 2001 },
+        { title: "Superman", year: 2005 },
+        { title: "Iron Man", year: 2008 },
+        { title: "Thanos", year: 2018 },
+        { title: "Bilal", year: 2015 }
+    ];
+
+    var customDrop = $(".custom_drop");
+
+    $("#SearchBar").keyup(function () {
+        var searchTerm = $(this).val().toLowerCase().trim();
+        var resultsContainer = $("#itemsContainer");
+        resultsContainer.empty();
+
+        for (var i = 0; i < searchItems.length; i++) {
+            if (searchItems[i].title.toLowerCase().includes(searchTerm) && searchTerm.length > 0) {
+                resultsContainer.append(
+                    '<li><a class="dropdown-item" href="#">' +
+                    searchItems[i].title + ' ' + searchItems[i].year +
+                    '</a></li>'
+                );
+            }
+        }
+
+        // Toggle the 'active' class based on the search results
+        customDrop.toggleClass("active", resultsContainer.children().length > 0);
+    });
+});
+
+    </script>
+
+</body>
